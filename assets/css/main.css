@@ -1662,7 +1662,7 @@ input, select, textarea {
 		font-family: 'Tangerine', cursive;
 		font-size:3.5em;
 		margin-bottom: 0;
-		
+		font-weight: 900;
 		line-height: 1.65em;
 	}
 
@@ -1862,7 +1862,7 @@ input, select, textarea {
 
 		#banner .abschied {
 			line-height: 2;
-			margin: 1em auto;
+			margin: 0 auto;
 		}
 	
 
@@ -1986,3 +1986,27 @@ input, select, textarea {
 		font-family: 'Great Vibes', cursive;
 
 	}
+
+	@media screen and (max-width: 361px) {
+	body, input, select, textarea {
+    font-size: 8pt;
+	}
+
+	#banner .handwriting {
+		letter-spacing: normal;
+		text-transform: none;
+		font-family: 'Tangerine', cursive;
+		font-size: 2.5em;
+		margin-bottom: 0;
+		line-height: 1.65em;
+	}
+
+	#banner .inner img{
+		max-height: 175px;
+	}
+
+	#banner .inner h5 {
+		margin-top: -1em;
+		font-size: 0.6em;
+	}
+}
