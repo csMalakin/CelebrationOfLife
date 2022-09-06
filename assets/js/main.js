@@ -28,20 +28,20 @@
 			}, 100);
 		});
 
-	// Mobile?
-		if (browser.mobile)
-			$body.addClass('is-mobile');
-		else {
+	// // Mobile?
+	// 	if (browser.mobile)
+	// 		$body.addClass('is-mobile');
+	// 	else {
 
-			breakpoints.on('>medium', function() {
-				$body.removeClass('is-mobile');
-			});
+	// 		breakpoints.on('>medium', function() {
+	// 			$body.removeClass('is-mobile');
+	// 		});
 
-			breakpoints.on('<=medium', function() {
-				$body.addClass('is-mobile');
-			});
+	// 		breakpoints.on('<=medium', function() {
+	// 			$body.addClass('is-mobile');
+	// 		});
 
-		}
+	// 	}
 
 	// Scrolly.
 		$('.scrolly')
@@ -81,3 +81,20 @@
 		}
 
 })(jQuery);
+
+let celebration = document.querySelector('#celebration');
+let cleoName = document.querySelector('#name')
+let cleoDates = document.querySelector('#dates')
+
+celebration.addEventListener('animationend', ()=>{
+	celebration.classList.remove('fade-in')
+	celebration.classList.add('fade-out')
+	celebration.addEventListener('animationend',()=>{
+		celebration.classList.toggle('hidden')
+		cleoName.classList.add('fade-in')
+		cleoName.classList.toggle('hidden')
+		cleoDates.classList.add('fade-in')
+		cleoDates.classList.toggle('hidden')
+	})
+	
+})
