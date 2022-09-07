@@ -81,8 +81,11 @@
 
 		}
 
+<<<<<<< HEAD
 		
 
+=======
+>>>>>>> a4e9b5ecb6b2160674c6ef9c35c1e2e3878e00ec
 })(jQuery);
 
 let celebration = document.querySelector('#celebration');
@@ -100,6 +103,7 @@ celebration.addEventListener('animationend', ()=>{
 		cleoDates.classList.toggle('hidden')
 	})
 	
+<<<<<<< HEAD
 })
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -118,3 +122,6 @@ window.addEventListener(
         document.body.classList.remove('preload');
     },
     false);
+=======
+})
+>>>>>>> a4e9b5ecb6b2160674c6ef9c35c1e2e3878e00ec
