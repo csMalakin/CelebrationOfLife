@@ -28,20 +28,20 @@
 			}, 100);
 		});
 
-	// Mobile?
-		if (browser.mobile)
-			$body.addClass('is-mobile');
-		else {
+	// // Mobile?
+	// 	if (browser.mobile)
+	// 		$body.addClass('is-mobile');
+	// 	else {
 
-			breakpoints.on('>medium', function() {
-				$body.removeClass('is-mobile');
-			});
+	// 		breakpoints.on('>medium', function() {
+	// 			$body.removeClass('is-mobile');
+	// 		});
 
-			breakpoints.on('<=medium', function() {
-				$body.addClass('is-mobile');
-			});
+	// 		breakpoints.on('<=medium', function() {
+	// 			$body.addClass('is-mobile');
+	// 		});
 
-		}
+	// 	}
 
 	// Scrolly.
 		$('.scrolly')
@@ -49,6 +49,7 @@
 				speed: 1500,
 				offset: $header.outerHeight()
 			});
+			
 
 	// Menu.
 		$('#menu')
@@ -80,4 +81,40 @@
 
 		}
 
+		
+
 })(jQuery);
+
+let celebration = document.querySelector('#celebration');
+let cleoName = document.querySelector('#name')
+let cleoDates = document.querySelector('#dates')
+
+celebration.addEventListener('animationend', ()=>{
+	celebration.classList.remove('fade-in')
+	celebration.classList.add('fade-out')
+	celebration.addEventListener('animationend',()=>{
+		celebration.classList.toggle('hidden')
+		cleoName.classList.add('fade-in')
+		cleoName.classList.toggle('hidden')
+		cleoDates.classList.add('fade-in')
+		cleoDates.classList.toggle('hidden')
+	})
+	
+})
+
+document.addEventListener('DOMContentLoaded', function() {
+	celebration.classList.toggle("hidden")
+ });
+
+//  $(window).load(function() {
+// 	$("body").removeClass("preload");
+//   });
+
+window.addEventListener(
+    'load',
+    function load()
+    {
+        window.removeEventListener('load', load, false);
+        document.body.classList.remove('preload');
+    },
+    false);
